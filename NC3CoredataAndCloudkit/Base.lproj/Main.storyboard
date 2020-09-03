@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s8u-Vb-bgs">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Upload and Fethcing System-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NC3CoredataAndCloudkit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="j9p-PL-nyL">
+                                <rect key="frame" x="50" y="175" width="314" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icloud.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RG5-35-dI0">
+                                        <rect key="frame" x="0.0" y="0.6666666666666714" width="314" height="164.33333333333331"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0Z-xO-DM3">
+                                        <rect key="frame" x="0.0" y="217.66666666666669" width="314" height="164.66666666666669"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nay-dL-D83">
+                                                <rect key="frame" x="0.0" y="-20" width="314" height="40"/>
+                                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                                <state key="normal" title="Upload an Image"/>
+                                                <connections>
+                                                    <action selector="uploadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="34D-Zf-ZZ3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VS8-Zt-OF4">
+                                                <rect key="frame" x="0.0" y="144.66666666666669" width="314" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Uqp-jL-uNI"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                                <state key="normal" title="Fetch the Image"/>
+                                                <connections>
+                                                    <action selector="fetchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVu-5A-8nL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="VS8-Zt-OF4" secondAttribute="bottom" constant="-20" id="A0i-Q2-6S3"/>
+                                            <constraint firstItem="nay-dL-D83" firstAttribute="leading" secondItem="D0Z-xO-DM3" secondAttribute="leading" id="IsD-5T-cHn"/>
+                                            <constraint firstItem="nay-dL-D83" firstAttribute="height" secondItem="D0Z-xO-DM3" secondAttribute="height" multiplier="0.242424" id="Mxy-5o-KfR"/>
+                                            <constraint firstAttribute="trailing" secondItem="nay-dL-D83" secondAttribute="trailing" id="Qyr-wj-6Cp"/>
+                                            <constraint firstItem="nay-dL-D83" firstAttribute="top" secondItem="D0Z-xO-DM3" secondAttribute="top" constant="-20" id="Rpf-K0-q7w"/>
+                                            <constraint firstItem="VS8-Zt-OF4" firstAttribute="leading" secondItem="D0Z-xO-DM3" secondAttribute="leading" id="mfp-em-cy9"/>
+                                            <constraint firstAttribute="trailing" secondItem="VS8-Zt-OF4" secondAttribute="trailing" id="vrS-Ri-haV"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icloud.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Bdb-Xl-Ob5">
+                                        <rect key="frame" x="0.0" y="436" width="314" height="165"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j9p-PL-nyL" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8Y2-9U-yIq"/>
+                            <constraint firstItem="j9p-PL-nyL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RqB-WM-Xb3"/>
+                            <constraint firstItem="j9p-PL-nyL" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.758454" id="aI8-z2-GEo"/>
+                            <constraint firstItem="j9p-PL-nyL" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.775194" id="upg-ur-EVL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Upload and Fethcing System" id="Oku-74-q5C"/>
+                    <connections>
+                        <outlet property="fetchButton" destination="VS8-Zt-OF4" id="ZZ0-zr-lgD"/>
+                        <outlet property="fetchedImageView" destination="Bdb-Xl-Ob5" id="bbA-LJ-har"/>
+                        <outlet property="uploadButton" destination="nay-dL-D83" id="goL-68-ovc"/>
+                        <outlet property="uploadedImageView" destination="RG5-35-dI0" id="eEX-9p-ISr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852.17391304347836" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8iE-Ek-map">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s8u-Vb-bgs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ueK-j5-ZP7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aUa-7J-W8Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dZ-MG-BA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icloud.and.arrow.down" catalog="system" width="128" height="112"/>
+        <image name="icloud.and.arrow.up" catalog="system" width="128" height="106"/>
+    </resources>
+</document>
